@@ -1,11 +1,12 @@
-const App = () => {
+import Navbar from './components/Navbar/Navbar'
+import Todo from './components/Todo/Todo'
+
+const App: React.FC = () => {
   return (
     <>
-      <header className="App-header">
-        <p>Todo-List</p>
-      </header>
+      <Navbar />
+      <Todo />
     </>
   )
 }
-
 export default App
