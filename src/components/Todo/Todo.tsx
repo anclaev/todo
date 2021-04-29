@@ -1,6 +1,7 @@
 import s from './Todo.module.sass'
 
 import React, { useState } from 'react'
+import { ITodoNew } from '../../interfaces'
 
 enum labelStatus {
   valid = 'valid',
@@ -8,11 +9,7 @@ enum labelStatus {
   none = '',
 }
 
-interface ITodo {
-  onAdd(title: string): void
-}
-
-const Todo: React.FC<ITodo> = (props) => {
+const Todo: React.FC<ITodoNew> = ({ onAdd }) => {
   const [status, setStatus] = useState<string>(labelStatus.none)
   const [title, setTitle] = useState<string>('')
 
@@ -25,7 +22,7 @@ const Todo: React.FC<ITodo> = (props) => {
 
   const keyPressHandler = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter') {
-      props.onAdd(title)
+      onAdd(title)
       setTitle('')
       setStatus(labelStatus.none)
     }
