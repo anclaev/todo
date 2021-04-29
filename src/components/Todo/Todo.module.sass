@@ -1,1 +1,43 @@
-.f 
+.w
+    width: 80%
+    max-width: 768px
+
+.f
+    position: relative
+    display: flex
+    flex-direction: column
+    padding-top: 1.5rem
+
+    & > label
+        margin-top: 1.5rem    
+
+.l, .i
+    padding: 13px 0
+    transition: .25s ease
+
+.l 
+    top: 0
+    z-index: 0
+    position: absolute
+
+.lf
+    transform: translateY(-2rem)
+
+.lv
+    top: -2rem
+    color: cyan
+
+.i 
+    z-index: 1
+    border-bottom: 2px solid #fff !important
+    background: transparent
+
+    &:focus
+        border-bottom-color: cyan !important
+
+.iv
+    border-bottom-color: cyan !important
+
+@media (max-width: 576px)
+  .w
+    font-size: 14px

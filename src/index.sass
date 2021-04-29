@@ -8,6 +8,13 @@ body, ul
 nav 
   margin-bottom: 40px
 
+input[type="text"]
+  font-family: inherit
+  font-size: inherit
+  color: inherit
+  outline: none
+  border: 0
+
 #container 
   display: flex
   flex-direction: column
@@ -19,3 +26,11 @@ nav
 
   color: white
   background-color: #282c34
+
+@media (max-width: 576px)
+  nav 
+    margin-bottom: 20px
+
+@media (max-width: 320px)
+  nav 
+    margin-bottom: 10px
