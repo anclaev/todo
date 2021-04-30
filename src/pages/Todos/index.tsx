@@ -6,7 +6,23 @@ import Helmet from '../../components/SHelmet'
 import { ITodo } from '../../types'
 
 const Todos: React.FC = () => {
-  const [TodoList, setTodoList] = useState<ITodo[]>([])
+  const [TodoList, setTodoList] = useState<ITodo[]>([
+    {
+      id: 0,
+      title: 'Тест 1',
+      completed: false,
+    },
+    {
+      id: 1,
+      title: 'Тест 2',
+      completed: true,
+    },
+    {
+      id: 3,
+      title: 'Тест 3',
+      completed: false,
+    },
+  ])
 
   const addHandler = (title: string) => {
     const newTodo: ITodo = {
@@ -26,6 +42,15 @@ const Todos: React.FC = () => {
       })
     )
 
+  const changeHandler = (id: number, title: string) => {
+    setTodoList((prev) =>
+      prev.map((todo) => {
+        if (todo.id === id) todo.title = title
+        return todo
+      })
+    )
+  }
+
   const removeHandler = (id: number) => {
     setTodoList((prev) => prev.filter((todo) => todo.id !== id))
   }
@@ -38,6 +63,7 @@ const Todos: React.FC = () => {
         todos={TodoList}
         onRemove={removeHandler}
         onToggle={toggleHandler}
+        onChange={changeHandler}
       />
     </>
   )

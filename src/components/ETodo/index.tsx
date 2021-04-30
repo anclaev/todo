@@ -7,8 +7,12 @@ const ETodo: React.FC<TTodo> = (props) => {
   return (
     <div className={s.w} key={props.key}>
       <ECheck status={props.checked} switchStatus={props.switchStatus} />
-      {/* <span>{props.title}</span>
-      <i>Remove</i> */}
+      <input
+        type="text"
+        className={s.t}
+        value={props.title}
+        onChange={(e) => props.changeTitle(e.target.value)}
+      />
     </div>
   )
 }

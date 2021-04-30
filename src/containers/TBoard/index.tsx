@@ -13,6 +13,7 @@ const Board: React.FC<TBoard> = (props) => {
           className={s.i}
           title={todo.title}
           switchStatus={() => props.onToggle(todo.id)}
+          changeTitle={(title: string) => props.onChange(todo.id, title)}
         />
       ))}
     </div>

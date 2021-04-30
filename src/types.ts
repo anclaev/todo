@@ -18,6 +18,7 @@ export type TTodo = {
   checked: boolean
   className: string
   title: string
+  changeTitle: (title: string) => void
   switchStatus: (status: boolean) => void
 }
 
@@ -35,6 +36,7 @@ export type TBoard = {
   todos: ITodo[]
   onToggle: (id: number) => void
   onRemove: (id: number) => void
+  onChange: (id: number, title: string) => void
 }
 
 export type TIcon = {
