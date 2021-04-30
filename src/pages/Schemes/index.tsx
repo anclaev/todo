@@ -1,3 +1,10 @@
-const Schemes: React.FC = () => <div>Schemes Page</div>
+import Helmet from '../../components/SHelmet'
+
+const Schemes: React.FC = () => (
+  <>
+    <Helmet title="Проекты" />
+    <div>Schemes Page</div>
+  </>
+)
 
 export default Schemes

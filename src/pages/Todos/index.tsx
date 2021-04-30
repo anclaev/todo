@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import Board from '../../containers/TBoard'
 import Todo from '../../components/NTodo'
+import Helmet from '../../components/SHelmet'
 import { ITodo } from '../../interfaces'
 
 const Todos: React.FC = () => {
@@ -36,6 +37,7 @@ const Todos: React.FC = () => {
 
   return (
     <>
+      <Helmet title="Задачи" />
       <Todo onAdd={addHandler} />
       <Board
         todos={TodoList}

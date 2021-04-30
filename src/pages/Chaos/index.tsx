@@ -1,3 +1,10 @@
-const Chaos: React.FC = () => <div>Chaos Page</div>
+import Helmet from '../../components/SHelmet'
+
+const Chaos: React.FC = () => (
+  <>
+    <Helmet title="Свалка" />
+    <div>Chaos Page</div>
+  </>
+)
 
 export default Chaos
