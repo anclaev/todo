@@ -1,7 +1,7 @@
-import s from './Todo.module.sass'
+import s from './NTodo.module.sass'
 
 import React, { useState } from 'react'
-import { ITodoNew } from '../../interfaces'
+import { INTodo } from '../../interfaces'
 
 enum labelStatus {
   valid = 'valid',
@@ -9,7 +9,7 @@ enum labelStatus {
   none = '',
 }
 
-const Todo: React.FC<ITodoNew> = ({ onAdd }) => {
+const Todo: React.FC<INTodo> = ({ onAdd }) => {
   const [status, setStatus] = useState<string>(labelStatus.none)
   const [title, setTitle] = useState<string>('')
 

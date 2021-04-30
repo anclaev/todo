@@ -4,6 +4,6 @@ export interface ITodo {
   completed: boolean
 }
 
-export interface ITodoNew {
+export interface INTodo {
   onAdd(title: string): void
 }
