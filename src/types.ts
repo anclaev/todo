@@ -20,6 +20,7 @@ export type TTodo = {
   title: string
   changeTitle: (title: string) => void
   switchStatus: (status: boolean) => void
+  removeHandler: () => void
 }
 
 export type THelmet = {

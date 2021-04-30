@@ -1,3 +1,5 @@
+@import "../../styles/_var"
+
 .w 
     display: flex
     align-items: center
@@ -6,7 +8,17 @@
 
 .t
     flex-grow: 1
-    margin: 0 15px
-
+    margin: 0px 5px 0 15px 
+    
 .i 
+    width: 30px
+    height: 30px
+    padding: 0
     cursor: pointer
+
+    & path 
+        transition: .3s
+
+    &:hover path 
+        stroke: $primaryColor
+        stroke-width: 2

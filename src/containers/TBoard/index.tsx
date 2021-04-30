@@ -14,6 +14,7 @@ const Board: React.FC<TBoard> = (props) => {
           title={todo.title}
           switchStatus={() => props.onToggle(todo.id)}
           changeTitle={(title: string) => props.onChange(todo.id, title)}
+          removeHandler={() => props.onRemove(todo.id)}
         />
       ))}
     </div>

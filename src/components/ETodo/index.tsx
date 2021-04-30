@@ -13,8 +13,11 @@ const ETodo: React.FC<TTodo> = (props) => {
         className={s.t}
         value={props.title}
         onChange={(e) => props.changeTitle(e.target.value)}
+        placeholder="Задача"
       />
-      <Icon name="close" className={s.i} />
+      <button className={s.i} onClick={() => props.removeHandler()}>
+        <Icon name="close" />
+      </button>
     </div>
   )
 }
