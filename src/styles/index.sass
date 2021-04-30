@@ -30,6 +30,23 @@ input[type="text"], button
 
 li
   list-style-type: none
+  
+.trg
+    transition: .3s
+
+.trg-enter 
+    opacity: 0
+ 
+.trg-enter.trg-enter-active 
+    opacity: 1
+    transition: opacity 300ms ease-in
+ 
+.trg-exit 
+    opacity: 1
+
+.trg-exit.trg-exit-active 
+    opacity: 0
+    transition: opacity 300ms ease-in
 
 #container 
   display: flex

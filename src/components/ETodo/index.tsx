@@ -6,7 +6,7 @@ import Icon from '../EIcon'
 
 const ETodo: React.FC<TTodo> = (props) => {
   return (
-    <div className={s.w} key={props.key}>
+    <div className={s.w}>
       <ECheck status={props.checked} switchStatus={props.switchStatus} />
       <input
         type="text"

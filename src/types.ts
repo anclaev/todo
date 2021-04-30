@@ -14,9 +14,8 @@ export enum ELabelStatus {
 // Types
 
 export type TTodo = {
-  key: number
   checked: boolean
-  className: string
+  className?: string
   title: string
   changeTitle: (title: string) => void
   switchStatus: (status: boolean) => void
