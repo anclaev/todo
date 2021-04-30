@@ -1,2 +1,8 @@
 # ts-react-todo
-Todo-приложение на React &amp; TypeScript.
+Таск-менеджер.
+
+## Пакеты
+#### React — Фреймворк.
+#### React-router-dom — Роутинг.
+#### React-redux — Менеджер состояний.
+#### React-helmet — Динамический заголовок.
