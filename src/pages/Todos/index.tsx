@@ -22,9 +22,7 @@ const Todos: React.FC = () => {
     setTodoList((prev) =>
       prev.map((todo) => {
         if (todo.id === id) {
-          console.log('Last status: ', todo.completed)
           let status = !todo.completed
-          console.log('New status: ', status)
           todo.completed = status
         }
         return todo

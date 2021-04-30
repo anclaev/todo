@@ -1,5 +1,5 @@
-import { ReactComponent as Success } from './src/Success.svg'
-import { ReactComponent as Close } from './src/Close.svg'
+import { ReactComponent as Success } from './src/success.svg'
+import { ReactComponent as Close } from './src/close.svg'
 import { TIcon } from '../../types'
 
 const Icon: React.FC<TIcon> = (props) => {

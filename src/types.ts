@@ -18,8 +18,7 @@ export type TTodo = {
   checked: boolean
   className: string
   title: string
-  onChange: React.ChangeEventHandler
-  onClick: React.MouseEventHandler
+  switchStatus: (status: boolean) => void
 }
 
 export type THelmet = {
@@ -41,6 +40,11 @@ export type TBoard = {
 export type TIcon = {
   name: string
   className?: string
+}
+
+export type TCheck = {
+  status: boolean
+  switchStatus: (status: boolean) => void
 }
 
 // Interfaces
