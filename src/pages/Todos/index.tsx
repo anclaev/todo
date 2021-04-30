@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Board from '../../containers/TBoard'
 import Todo from '../../components/NTodo'
 import Helmet from '../../components/SHelmet'
-import { ITodo } from '../../interfaces'
+import { ITodo } from '../../types'
 
 const Todos: React.FC = () => {
   const [TodoList, setTodoList] = useState<ITodo[]>([])

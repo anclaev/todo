@@ -1,19 +1,5 @@
 import Helmet from 'react-helmet'
-
-enum ERels {
-  css = 'stylesheet',
-  icon = 'shortcut icon',
-}
-
-type THelmet = {
-  title?: string
-  description?: string
-  link?: {
-    rel: ERels
-    href: string
-    type?: string
-  }
-}
+import { THelmet } from '../../types'
 
 const LinkBuilder = (link: THelmet['link']) => {
   return !!link!.type ? (

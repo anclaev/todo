@@ -1,13 +1,7 @@
 import s from './NTodo.module.sass'
 
 import React, { useState } from 'react'
-import { INTodo } from '../../interfaces'
-
-enum labelStatus {
-  valid = 'valid',
-  focus = 'focus',
-  none = '',
-}
+import { ELabelStatus as labelStatus, INTodo } from '../../types'
 
 const Todo: React.FC<INTodo> = ({ onAdd }) => {
   const [status, setStatus] = useState<string>(labelStatus.none)
@@ -66,4 +60,5 @@ const Todo: React.FC<INTodo> = ({ onAdd }) => {
     </div>
   )
 }
+
 export default Todo

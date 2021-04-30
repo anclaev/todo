@@ -1,13 +1,7 @@
 import s from './TBoard.module.sass'
 
-import { ITodo } from '../../interfaces'
+import { TBoard } from '../../types'
 import ETodo from '../../components/ETodo'
-
-type TBoard = {
-  todos: ITodo[]
-  onToggle: (id: number) => void
-  onRemove: (id: number) => void
-}
 
 const Board: React.FC<TBoard> = (props) => {
   return (
