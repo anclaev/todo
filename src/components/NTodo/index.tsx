@@ -7,8 +7,7 @@ import { toast } from 'materialize-css'
 const Todo: React.FC<INTodo> = ({ onAdd }) => {
   const [status, setStatus] = useState<string>(labelStatus.none)
   const [title, setTitle] = useState<string>('')
-  const [toastTimer, setToastTimer] = useState<boolean>(false)
-  const [todoTimer, setTodoTimer] = useState<boolean>(false)
+  const [timer, setTimer] = useState<boolean>(false)
 
   const ref = useRef<HTMLInputElement>(null)
 
@@ -23,26 +22,19 @@ const Todo: React.FC<INTodo> = ({ onAdd }) => {
     // Проверка нажатия Enter
     if (event.key === 'Enter') {
       // Проверка на пустоту поля
-      if (ref.current!.value && !todoTimer) {
+      if (ref.current!.value) {
         onAdd(title)
         setTitle('')
         setStatus(labelStatus.none)
-        setTodoTimer(true)
-
-        // Таймер на следующие задачи
-        let todoTimer = setTimeout(() => {
-          setTodoTimer(false)
-          clearTimeout(todoTimer)
-        }, 2000)
       } else {
         // Проверка на активный тост
-        if (!toastTimer) {
+        if (!timer) {
           toast({ html: `Задача не может быть безымянной` })
-          setToastTimer(true)
+          setTimer(true)
 
           // Таймер на следующие тосты
           let toastTimer = setTimeout(() => {
-            setToastTimer(false)
+            setTimer(false)
             clearTimeout(toastTimer)
           }, 4000)
         }
