@@ -21,10 +21,7 @@ const Todos: React.FC = () => {
   const toggleHandler = (id: number) =>
     setTodoList((prev) =>
       prev.map((todo) => {
-        if (todo.id === id) {
-          let status = !todo.completed
-          todo.completed = status
-        }
+        if (todo.id === id) todo.completed = !todo.completed
         return todo
       })
     )
