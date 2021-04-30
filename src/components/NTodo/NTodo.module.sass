@@ -1,3 +1,5 @@
+@import "../../styles/_var"
+    
 .w
     width: 80%
     max-width: 768px
@@ -25,7 +27,7 @@
 
 .lv
     top: -2rem
-    color: cyan
+    color: $primaryColor
 
 .i 
     z-index: 1
@@ -33,10 +35,10 @@
     background: transparent
 
     &:focus
-        border-bottom-color: cyan !important
+        border-bottom-color: $primaryColor !important
 
 .iv
-    border-bottom-color: cyan !important
+    border-bottom-color: $primaryColor !important
 
 @media (max-width: 576px)
   .w

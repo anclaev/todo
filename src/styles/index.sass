@@ -1,3 +1,5 @@
+@import "./_var"
+  
 *
   box-sizing: border-box
   
@@ -38,15 +40,16 @@ li
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
 
   color: white
-  background-color: #282c34
+  background-color: $themeColor
 
 ::-webkit-scrollbar
   width: 7px
-  background: #282c34
+  background: $themeColor
 
 ::-webkit-scrollbar-thumb
   border-radius: 5px
-  background: rgba(0, 255, 255, .5)
+  @include PrimaryColorOpacityBackground($opacity: .5)
+  
 
 @media (max-width: 576px)
   nav 

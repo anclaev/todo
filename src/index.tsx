@@ -1,4 +1,4 @@
-import './index.sass'
+import './styles/index.sass'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
