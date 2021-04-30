@@ -1,8 +1,15 @@
 # ts-react-todo
+
 Таск-менеджер.
 
 ## Пакеты
-#### React — Фреймворк.
-#### React-router-dom — Роутинг.
-#### React-redux — Менеджер состояний.
-#### React-helmet — Динамический заголовок.
+
+#### react — фреймворк.
+
+#### react-router-dom — роутинг.
+
+#### react-redux — менеджер состояний.
+
+#### react-helmet — динамический заголовок.
+
+#### react-transition-group — анимация компонентов.
