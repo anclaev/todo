@@ -23,7 +23,7 @@ const LinkBuilder = (link: THelmet['link']) => {
   )
 }
 
-export const SHelmet: React.FC<THelmet> = (props) => (
+const SHelmet: React.FC<THelmet> = (props) => (
   <Helmet>
     {props.title ? <title>{props.title}</title> : ''}
     {props.description ? (
@@ -34,3 +34,5 @@ export const SHelmet: React.FC<THelmet> = (props) => (
     {props.link ? LinkBuilder(props.link) : ''}
   </Helmet>
 )
+
+export default SHelmet
