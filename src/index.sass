@@ -1,6 +1,9 @@
 *
   box-sizing: border-box
   
+body 
+  overflow-x: hidden
+
 body, ul
   margin: 0
   padding: 0
@@ -31,6 +34,14 @@ input[type="text"]
 
   color: white
   background-color: #282c34
+
+::-webkit-scrollbar
+  width: 7px
+  background: #282c34
+
+::-webkit-scrollbar-thumb
+  border-radius: 5px
+  background: rgba(0, 255, 255, .5)
 
 @media (max-width: 576px)
   nav 
