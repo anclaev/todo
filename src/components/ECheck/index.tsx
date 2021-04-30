@@ -4,8 +4,8 @@ import Icon from './success.svg'
 import { TCheck } from '../../types'
 
 const setBackground = (status: boolean): object => {
-  if (status) return { background: `url(${Icon}) no-repeat center center` }
-  else return { background: 'none' }
+  if (status) return { backgroundImage: `url(${Icon})`, backgroundSize: '70%' }
+  else return { backgroundImage: `url(${Icon})`, backgroundSize: 0 }
 }
 
 const Check: React.FC<TCheck> = ({ status, switchStatus }) => (
