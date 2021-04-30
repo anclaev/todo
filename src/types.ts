@@ -38,6 +38,11 @@ export type TBoard = {
   onRemove: (id: number) => void
 }
 
+export type TIcon = {
+  name: string
+  className?: string
+}
+
 // Interfaces
 
 export interface ITodo {
