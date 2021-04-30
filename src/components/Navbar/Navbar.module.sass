@@ -7,7 +7,7 @@
     display: flex
     justify-content: space-between
 
-.i 
+.i
     position: relative 
     cursor: pointer
     margin-right: 20px
@@ -36,6 +36,10 @@
         &:after 
             width: 100%
 
+.l > li
+     &:after 
+       width: 100%
+     
 .current
     &:after
         width: 100%
@@ -52,9 +56,9 @@
         flex-direction: column
         align-items: center
 
-    .i 
-        margin-right: 0
-        margin-bottom: 20px
+        & > a
+            margin-right: 0
+            margin-bottom: 20px
 
-        &:last-of-type
-            margin-bottom: 0
+            &:last-child
+                margin-bottom: 0
