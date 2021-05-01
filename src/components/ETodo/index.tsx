@@ -22,6 +22,9 @@ const ETodo: React.FC<TTodo> = (props) => {
           onBlur={() => setFocus(!focus)}
         />
       </div>
+      <button className={`${s.i} ${s.im}`}>
+        <Icon name="more" />
+      </button>
       <button className={s.i} onClick={() => props.removeHandler()}>
         <Icon name="close" />
       </button>

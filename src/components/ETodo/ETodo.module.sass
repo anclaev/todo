@@ -7,6 +7,10 @@
     
     padding: 15px 0
 
+    &:hover 
+        & button 
+            opacity: 1
+
 .t
     position: relative
     margin: 0 5px 0px 15px
@@ -20,17 +24,16 @@
         bottom: 0
         left: 3px
         height: 1.5px
-        width: 99%
+        width: 98%
         opacity: 0
         background: $primaryColor
         transition: .3s
-
 
     & input
         position: absolute
         top: 50%
         transform: translateY(-50%)
-        width: 100%
+        width: 99%
         transition: .3s
 
 .tf
@@ -44,12 +47,22 @@
 .i 
     width: 30px
     height: 30px
+
     padding: 0
+    margin: 0 5px
+    
     cursor: pointer
 
-    & path 
+    & path, circle
         transition: .3s
-
-    &:hover path 
+    
+    &:hover path
         stroke: $primaryColor
         stroke-width: 2
+
+    &:hover circle 
+        fill: $primaryColor
+    
+.im 
+    transition: .3s
+    opacity: 0
