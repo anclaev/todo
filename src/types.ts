@@ -49,6 +49,10 @@ export type TCheck = {
   switchStatus: (status: boolean) => void
 }
 
+export type TLoader = {
+  status: boolean
+}
+
 // Interfaces
 
 export interface ITodo {

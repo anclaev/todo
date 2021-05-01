@@ -65,19 +65,17 @@ const Todo: React.FC<INTodo> = ({ onAdd }) => {
 
   return (
     <div className={s.w}>
-      <div className={s.f}>
-        <label className={labelClasses()}>Новая задача</label>
-        <input
-          type="text"
-          value={title}
-          ref={ref}
-          onChange={changeHandler}
-          onFocus={labelFocusHandler}
-          onBlur={labelBlurHandler}
-          onKeyPress={keyPressHandler}
-          className={`${s.i} ${status === 'valid' ? s.iv : ''}`}
-        />
-      </div>
+      <label className={labelClasses()}>Новая задача</label>
+      <input
+        type="text"
+        value={title}
+        ref={ref}
+        onChange={changeHandler}
+        onFocus={labelFocusHandler}
+        onBlur={labelBlurHandler}
+        onKeyPress={keyPressHandler}
+        className={`${s.i} ${status === 'valid' ? s.iv : ''}`}
+      />
     </div>
   )
 }

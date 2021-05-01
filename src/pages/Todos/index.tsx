@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import s from './Todos.module.sass'
+
+import { useStateIfMounted } from 'use-state-if-mounted'
+import { useState, useEffect } from 'react'
 
 import Board from '../../containers/TBoard'
 import Todo from '../../components/NTodo'
 import Helmet from '../../components/SHelmet'
+import Loader from '../../components/SLoader'
 import { ITodo } from '../../types'
 
 const Todos: React.FC = () => {
@@ -23,6 +27,14 @@ const Todos: React.FC = () => {
       completed: false,
     },
   ])
+
+  const [loader, setLoader] = useStateIfMounted<boolean>(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false)
+    }, 1000)
+  })
 
   const addHandler = (title: string) => {
     const newTodo: ITodo = {
@@ -56,7 +68,8 @@ const Todos: React.FC = () => {
   }
 
   return (
-    <>
+    <div className={s.w}>
+      <Loader status={loader} />
       <Helmet title="Задачи" />
       <Todo onAdd={addHandler} />
       <Board
@@ -65,7 +78,7 @@ const Todos: React.FC = () => {
         onToggle={toggleHandler}
         onChange={changeHandler}
       />
-    </>
+    </div>
   )
 }
 
