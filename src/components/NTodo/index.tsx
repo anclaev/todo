@@ -29,7 +29,7 @@ const Todo: React.FC<INTodo> = ({ onAdd }) => {
       } else {
         // Проверка на активный тост
         if (!timer) {
-          toast({ html: `Задача не может быть безымянной` })
+          toast({ html: `Задаче нужно название` })
           setTimer(true)
 
           // Таймер на следующие тосты
