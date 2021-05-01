@@ -12,7 +12,7 @@ const Chaos: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false)
-    }, 500)
+    }, 300)
   })
 
   return (

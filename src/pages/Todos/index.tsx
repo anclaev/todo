@@ -33,7 +33,7 @@ const Todos: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false)
-    }, 500)
+    }, 300)
   })
 
   const addHandler = (title: string) => {
