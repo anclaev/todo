@@ -4,12 +4,43 @@
     display: flex
     align-items: center
     justify-content: space-between
+    
     padding: 15px 0
 
 .t
-    flex-grow: 1
-    margin: 0px 5px 0 15px 
-    
+    position: relative
+    margin: 0 5px 0px 15px
+    height: 30px
+    flex-grow: 1    
+
+    &:after 
+        content: ''
+        position: absolute
+        display: block 
+        bottom: 0
+        left: 3px
+        height: 1.5px
+        width: 99%
+        opacity: 0
+        background: $primaryColor
+        transition: .3s
+
+
+    & input
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: 100%
+        transition: .3s
+
+.tf
+    &:after 
+        opacity: 1
+
+    & input 
+        top: -3px
+        transform: none
+
 .i 
     width: 30px
     height: 30px
