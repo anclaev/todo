@@ -12,14 +12,14 @@ const Chaos: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false)
-    }, 1000)
+    }, 500)
   })
 
   return (
-    <div className={s.w}>
+    <div className={`${s.w} ${loader ? s.wh : ''}`}>
       <Loader status={loader} />
       <Helmet title="Свалка" />
-      Chaos Page
+      Chaos page
     </div>
   )
 }

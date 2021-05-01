@@ -12,11 +12,11 @@ const Schemes: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false)
-    }, 1000)
+    }, 500)
   })
 
   return (
-    <div className={s.w}>
+    <div className={`${s.w} ${loader ? s.wh : ''}`}>
       <Helmet title="Проекты" />
       <Loader status={loader} />
       Schemes Page

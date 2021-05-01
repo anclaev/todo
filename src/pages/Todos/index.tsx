@@ -33,7 +33,7 @@ const Todos: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false)
-    }, 1000)
+    }, 500)
   })
 
   const addHandler = (title: string) => {
@@ -68,7 +68,7 @@ const Todos: React.FC = () => {
   }
 
   return (
-    <div className={s.w}>
+    <div className={`${s.w} ${loader ? s.wh : ''}`}>
       <Loader status={loader} />
       <Helmet title="Задачи" />
       <Todo onAdd={addHandler} />
