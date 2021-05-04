@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router'
 
 import Navbar from './components/Navbar'
+import Auth from './containers/Auth'
 
 import Chaos from './pages/Chaos'
 import Schemes from './pages/Schemes'
@@ -10,6 +11,7 @@ const App: React.FC = () => {
   return (
     <>
       <Navbar />
+      <Auth />
       <Switch>
         <Route exact path="/" component={Todos} />
         <Route path="/chaos" component={Chaos} />

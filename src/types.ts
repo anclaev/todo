@@ -11,6 +11,11 @@ export enum ELabelStatus {
   none = '',
 }
 
+export enum EAuthStatus {
+  hide = 'hide',
+  visible = 'visible',
+}
+
 // Types
 
 export type TTodo = {
@@ -59,6 +64,10 @@ export interface ITodo {
   id: number
   title: string
   completed: boolean
+}
+
+export interface IAuth {
+  isLogin?: boolean
 }
 
 export interface INTodo {

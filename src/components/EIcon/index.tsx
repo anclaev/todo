@@ -1,6 +1,7 @@
 import { ReactComponent as Success } from './src/success.svg'
 import { ReactComponent as Close } from './src/close.svg'
 import { ReactComponent as More } from './src/more.svg'
+
 import { TIcon } from '../../types'
 
 const Icon: React.FC<TIcon> = (props) => {
